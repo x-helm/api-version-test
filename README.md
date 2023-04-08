@@ -32,3 +32,16 @@
   }
 }
 ```
+
+## Test
+
+```
+> helm upgrade -i apiversiontest charts/apiversiontest
+> kubectl get issuer -o yaml
+
+
+# change apiversion to v1beta1 in issuer.yaml
+
+> helm upgrade -i apiversiontest charts/apiversiontest
+> kubectl get issuer -o yaml
+```
