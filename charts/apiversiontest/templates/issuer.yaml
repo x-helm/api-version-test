@@ -1,0 +1,10 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: {{ include "apiversiontest.fullname" . }}-selfsigned-issuer
+  annotations:
+    version: v1alpha2
+  labels:
+    {{- include "apiversiontest.labels" . | nindent 4 }}
+spec:
+  selfSigned: {}
